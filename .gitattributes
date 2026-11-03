@@ -1,0 +1,3 @@
+# Los scripts POSIX deben funcionar también al clonar desde Windows.
+deployment/*.sh text eol=lf
+deployment/models/*.sha256 text eol=lf
