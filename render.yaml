@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: bibliometria-analisis-algoritmos
+    runtime: docker
+    branch: main
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    numInstances: 1
+    # De pago: 1 CPU / 2 GB. Revisar el coste antes de crear el servicio.
+    plan: 1c-2g
+    envVars:
+      - key: MINILM_MODEL_DIR
+        value: /opt/models/minilm
+      - key: BGE_MODEL_DIR
+        value: /opt/models/bge
+      - key: JAVA_TOOL_OPTIONS
+        value: "-XX:InitialRAMPercentage=10.0 -XX:MaxRAMPercentage=40.0 -XX:+ExitOnOutOfMemoryError"
