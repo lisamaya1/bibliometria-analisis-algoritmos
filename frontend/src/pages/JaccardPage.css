@@ -1,0 +1,16 @@
+.jaccard-controles { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; align-items: end; }
+.jaccard-controles label { flex-direction: column; align-items: stretch; min-width: 0; }
+.jaccard-controles select { width: 100%; min-width: 0; text-overflow: ellipsis; }
+.jaccard-controles button { margin-left: 0; }
+.jaccard-resumen p { overflow-wrap: anywhere; }
+.jaccard-porcentaje { display: flex; flex-direction: column; gap: 8px; margin: 22px 0 12px; color: var(--verde-900); }
+.jaccard-porcentaje strong { font-size: clamp(2rem, 5vw, 3rem); font-variant-numeric: tabular-nums; }
+.jaccard-metricas { margin-bottom: 24px; }
+.jaccard-detalles details { border-top: 1px solid var(--border-subtle); padding: 6px 0; }
+.jaccard-detalles p { max-height: 240px; overflow: auto; overflow-wrap: anywhere; line-height: 1.8; padding: 8px 0; color: var(--text-muted); }
+.jaccard-detalles h3 { margin: 12px 0 0; }
+.jaccard-pagina button:disabled { opacity: .6; cursor: not-allowed; }
+@media (max-width: 850px) {
+  .jaccard-controles { grid-template-columns: minmax(0, 1fr); }
+  .jaccard-controles button { width: 100%; justify-content: center; }
+}

@@ -1,0 +1,41 @@
+.comparacion-pagina { max-width: 1500px; }
+.comparacion-controles { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; padding: 22px; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 16px; }
+.comparacion-controles label { display: flex; align-items: center; gap: 10px; font-size: .9rem; color: var(--text-muted); }
+.comparacion-controles select { padding: 8px 12px; background: white; border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-main); }
+.comparacion-controles input { width: 18px; height: 18px; accent-color: var(--verde-700); }
+.comparacion-controles button { margin-left: auto; }
+.comparacion-controles :focus-visible, .comparacion-mediciones summary:focus-visible { outline: 3px solid var(--verde-600); outline-offset: 4px; }
+.comparacion-ayuda { color: var(--text-muted); font-size: .85rem; line-height: 1.7; margin: 14px 0 22px; }
+.comparacion-tarjeta { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 16px; padding: 24px; margin-bottom: 24px; min-width: 0; }
+.comparacion-tarjeta h2 { font-size: 1.15rem; margin-bottom: 14px; }
+.comparacion-tarjeta h3 { font-size: 1rem; margin-bottom: 16px; }
+.comparacion-inicio { padding: 44px 24px; text-align: center; }
+.comparacion-inicio p { color: var(--text-muted); line-height: 1.7; }
+.comparacion-resumen { background: var(--verde-50); border-color: var(--verde-200); }
+.comparacion-resumen p { line-height: 1.8; }
+.comparacion-ganador { font-size: 1.1rem; font-weight: 600; color: var(--verde-900); }
+.comparacion-datos { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.comparacion-datos span { padding: 6px 10px; border: 1px solid var(--verde-200); background: white; border-radius: 8px; font-size: .8rem; }
+.comparacion-tabla-scroll { overflow-x: auto; }
+.comparacion-tabla { width: 100%; border-collapse: collapse; font-size: .88rem; text-align: left; }
+.comparacion-tabla th, .comparacion-tabla td { padding: 13px 12px; border-bottom: 1px solid var(--border-subtle); vertical-align: middle; }
+.comparacion-tabla thead { background: var(--verde-50); }
+.comparacion-tabla tbody th { font-weight: 500; }
+.comparacion-tabla td { font-variant-numeric: tabular-nums; }
+.comparacion-fila-ganadora { background: var(--verde-50); }
+.comparacion-distintivo { display: inline-block; font-size: .7rem; margin-left: 10px; padding: 4px 7px; color: var(--verde-900); background: var(--verde-100); border-radius: 6px; }
+.comparacion-mediciones summary { cursor: pointer; font-size: .9rem; color: var(--verde-800); padding: 8px 0; }
+.comparacion-listas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 20px; }
+.comparacion-ranking { overflow: auto; max-height: 470px; }
+.comparacion-ranking th { overflow-wrap: anywhere; }
+.comparacion-titulo-resultados { font-size: 1.15rem; }
+.comparacion-error, .comparacion-aviso { border-radius: 10px; padding: 14px 18px; margin: 18px 0; line-height: 1.7; }
+.comparacion-error { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+.comparacion-aviso { background: #fffbeb; color: #854d0e; border: 1px solid #fde68a; }
+.comparacion-resumen-error { background: #fef2f2; border-color: #fecaca; }
+@media (max-width: 650px) {
+  .comparacion-controles { align-items: stretch; gap: 18px; }
+  .comparacion-controles label { flex-wrap: wrap; }
+  .comparacion-controles button { margin-left: 0; width: 100%; justify-content: center; }
+  .comparacion-tarjeta { padding: 18px; }
+}

@@ -1,0 +1,23 @@
+.clasica-explicacion p, .clasica-explicacion li { line-height: 1.7; }
+.clasica-explicacion ul { margin: 12px 0 0; padding-left: 22px; color: var(--text-muted); }
+.clasica-acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 16px; }
+.clasica-acciones h2 { margin: 0 auto 0 0; }
+.clasica-acciones .btn-secundario { padding: 9px 14px; border: 1px solid var(--border-subtle); border-radius: 8px; background: var(--bg-card); color: var(--verde-800); font-size: .85rem; cursor: pointer; }
+.clasica-acciones .btn-secundario:hover:not(:disabled) { background: var(--verde-50); border-color: var(--verde-600); }
+.clasica-articulos { border: 0; padding: 0; margin: 0; min-width: 0; }
+.clasica-articulos legend { padding: 0 0 12px; color: var(--text-muted); font-size: .9rem; }
+.clasica-lista { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; max-height: 380px; overflow-y: auto; border: 1px solid var(--border-subtle); border-radius: 12px; padding: 10px; }
+.clasica-lista label { display: flex; align-items: flex-start; gap: 10px; padding: 12px; border: 1px solid var(--border-subtle); border-radius: 8px; line-height: 1.6; font-size: .85rem; cursor: pointer; overflow-wrap: anywhere; }
+.clasica-lista input { width: 18px; height: 18px; flex-shrink: 0; margin-top: 3px; accent-color: var(--verde-700); }
+.clasica-lista .clasica-elegido { border-color: var(--verde-600); background: var(--verde-50); }
+.clasica-pagina :focus-visible { outline: 3px solid var(--verde-600); outline-offset: 3px; }
+.clasica-pagina button:disabled { opacity: .6; cursor: not-allowed; }
+.clasica-tabla { min-width: 830px; }
+.clasica-tabla caption { text-align: left; padding: 0 0 16px; color: var(--text-muted); }
+.clasica-tabla tbody th { min-width: 260px; max-width: 360px; }
+.clasica-tabla td { white-space: nowrap; vertical-align: top; }
+.clasica-titulo { display: block; font-size: .78rem; margin-top: 8px; color: var(--text-muted); line-height: 1.6; }
+.clasica-decimal, .clasica-distancia { display: block; margin-top: 8px; font-size: .8rem; color: var(--text-muted); }
+@media (max-width: 850px) {
+  .clasica-lista { grid-template-columns: minmax(0, 1fr); }
+}

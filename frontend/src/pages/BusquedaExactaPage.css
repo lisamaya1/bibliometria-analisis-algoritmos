@@ -1,0 +1,30 @@
+.busqueda-controles { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) auto; align-items: end; }
+.busqueda-controles label { flex-direction: column; align-items: stretch; min-width: 0; }
+.busqueda-controles select, .busqueda-controles input { width: 100%; min-width: 0; height: auto; padding: 10px 12px; border: 1px solid var(--border-subtle); border-radius: 8px; background: white; color: var(--text-main); font: inherit; }
+.busqueda-controles select { text-overflow: ellipsis; }
+.busqueda-controles button { margin-left: 0; }
+.busqueda-pagina button:disabled { opacity: .6; cursor: not-allowed; }
+.busqueda-pagina .btn-secundario { padding: 9px 14px; border: 1px solid var(--verde-200); border-radius: 9px; background: white; color: var(--verde-800); cursor: pointer; font: inherit; font-size: .85rem; }
+.busqueda-pagina .btn-secundario:hover:not(:disabled) { background: var(--verde-50); border-color: var(--verde-600); }
+.busqueda-ejemplos { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 24px; font-size: .85rem; color: var(--text-muted); }
+.busqueda-ejemplos button { padding: 8px 12px; }
+.busqueda-resumen p { overflow-wrap: anywhere; }
+.busqueda-patron-visible { white-space: pre-wrap; background: white; padding: 2px 6px; border-radius: 4px; }
+.busqueda-ocurrencias { margin: 18px 0 8px; font-size: 1.2rem; color: var(--verde-900); }
+.busqueda-posiciones { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 8px 0; }
+.busqueda-posiciones li { background: white; border: 1px solid var(--verde-200); border-radius: 8px; padding: 6px 12px; font-variant-numeric: tabular-nums; }
+.busqueda-tarjetas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.busqueda-algoritmo { display: flex; flex-direction: column; }
+.busqueda-algoritmo .comparacion-ayuda { margin-top: 0; }
+.busqueda-metricas { font-size: .85rem; }
+.busqueda-metricas > div { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border-subtle); }
+.busqueda-metricas dt { color: var(--text-muted); overflow-wrap: anywhere; }
+.busqueda-metricas dd { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+.busqueda-tiempos { margin-top: auto; padding-top: 22px; }
+.busqueda-tiempos h4 { font-size: .85rem; font-weight: 600; }
+.busqueda-pagina .comparacion-controles :focus-visible, .busqueda-ejemplos button:focus-visible { outline: 3px solid var(--verde-600); outline-offset: 3px; }
+@media (max-width: 1100px) {
+  .busqueda-controles { grid-template-columns: minmax(0, 1fr); }
+  .busqueda-controles button { width: 100%; justify-content: center; }
+  .busqueda-tarjetas { grid-template-columns: minmax(0, 1fr); }
+}

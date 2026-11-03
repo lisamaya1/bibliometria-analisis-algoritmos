@@ -1,0 +1,15 @@
+target/
+node_modules/
+dist/
+dist-ssr/
+.vscode/
+.idea/
+*.class
+*.log
+.env
+.env.*
+!.env.example
+*.onnx
+*.onnx_data
+.DS_Store
+Thumbs.db
