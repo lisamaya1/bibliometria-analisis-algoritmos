@@ -163,13 +163,13 @@ No se descarga un modelo durante una petición ni se devuelve una similitud fict
 
 ### Memoria y plan
 
-`render.yaml` propone **`1c-2g` (Standard), 1 CPU y 2 GB de RAM**, una instancia.
-Es un plan **de pago**: revisar el importe mostrado por Render antes de confirmar.
-Es una configuración propuesta; estos archivos no crean ni contratan el servicio.
-Se recomienda al menos 2 GB para usar ambas funciones de IA. Las observaciones
-locales anteriores, alrededor de 423–467 MiB del proceso completo, no dejan margen
-para garantizar estabilidad con solo 512 MiB. El plan gratuito puede fallar por
-memoria; tampoco esos registros sustituyen una medición dentro del contenedor.
+`render.yaml` propone **`free`**, una instancia gratuita de 512 MiB y CPU compartida.
+Es una configuración orientada a demostraciones y tráfico bajo; estos archivos no
+crean ni contratan el servicio por sí solos. La imagen se verificó localmente con
+los límites de 512 MiB y 0.1 CPU: inició ambos modelos y respondió correctamente,
+pero el consumo llegó a aproximadamente 503 MiB bajo cuatro análisis simultáneos.
+Por ese margen reducido, conviene evitar solicitudes de IA concurrentes. El primer
+acceso también puede tardar mientras Render reactiva el servicio gratuito.
 
 El plan se puede cambiar en **Compute → Edit** de Render sin cambiar código Java.
 Si se gestiona mediante Blueprint, mantener `plan` sincronizado en `render.yaml`
@@ -185,8 +185,8 @@ Consulta [planes y memoria](https://render.com/docs/compute-plans) y
 2. En Render, elegir **New → Blueprint** y conectar ese repositorio.
 3. Utilizar `render.yaml` desde la raíz. Revisar que se proponga un único Web
    Service Docker, contexto `.`, Dockerfile `./Dockerfile`, una instancia y el plan
-   de 2 GB. No establecer Root Directory en `backend` ni en `frontend`.
-4. Revisar el coste y confirmar la creación cuando corresponda. No añadir bases
+   `free`. No establecer Root Directory en `backend` ni en `frontend`.
+4. Confirmar la creación del servicio gratuito. No añadir bases
    de datos, Static Site separado ni disco persistente.
 5. Revisar los logs de build y los de ejecución. Deben indicar Spring iniciado
    en el puerto recibido y ambos modelos cargados con sus revisiones fijadas.

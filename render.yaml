@@ -7,8 +7,8 @@ services:
     dockerContext: .
     healthCheckPath: /api/health
     numInstances: 1
-    # De pago: 1 CPU / 2 GB. Revisar el coste antes de crear el servicio.
-    plan: 1c-2g
+    # Suficiente para una demostración de bajo tráfico. Puede suspenderse por inactividad.
+    plan: free
     envVars:
       - key: MINILM_MODEL_DIR
         value: /opt/models/minilm
